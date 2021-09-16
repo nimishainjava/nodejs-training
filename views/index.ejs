@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <form action="/adduser" method= "post">
+            Name: <input type='text' name='uname'/>
+            <br/>
+            Email: <input type='text' name='email'/>
+            <br/>
+            <button>Add User</button>
+            </form>
+        </div>
+        <div>
+            <ul>
+                <% for(i=0; i< userd.length; i++) { %>
+                    <li>
+                    <span>Name: <%= userd[i].uname %></span><br/>
+                    <span>Email: <%= userd[i].email %></span>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </body>
+</html>
